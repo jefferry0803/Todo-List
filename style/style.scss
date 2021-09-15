@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Shadows Into Light", cursive;
+}
+//讓勾勾和垃圾桶icon點不到
+i {
+  pointer-events: none;
+}
+
+body {
+  background-image: url(../olga-thelavart-uP4jLndMWnY-unsplash.jpg);
+  background-position: bottom 300px center;
+}
+
+header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+  }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input,
+  button {
+    padding: 0.25rem 0.5rem;
+    font-size: 1.75rem;
+    margin: 0.1rem;
+    border-radius: 15px;
+    background-color: yellow;
+  }
+  input[type="number"] {
+    width: 50px;
+    text-align: center;
+  }
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  button {
+    cursor: pointer;
+  }
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button.sortButton {
+    padding: 0.25rem 0.5rem;
+    font-size: 1.5rem;
+    margin: 1rem;
+    border-radius: 15px;
+    background-color: peru;
+    cursor: pointer;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div.todo {
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0rem;
+    transition: all 0.1s ease;
+    p {
+      background-color: yellow;
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+      border-radius: 15px;
+      border-bottom: 2px solid gray;
+      border-right: 2px solid gray;
+    }
+    p.todo-text {
+      width: 50vw;
+    }
+    p.todo-time {
+      width: 20vw;
+      text-align: center;
+    }
+    button {
+      background-color: yellow;
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+      border-radius: 15px;
+      border-bottom: 2px solid gray;
+      border-right: 2px solid gray;
+      cursor: pointer;
+    }
+    button.complete {
+      color: green;
+      margin-left: 1rem;
+    }
+    button.trash {
+      color: red;
+    }
+  }
+}
+
+.done {
+  opacity: 0.2;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  to {
+    transform: scale(0);
+  }
+}
+
+@media screen and (max-width: "1100px") {
+  body {
+    background-image: url(../olga-thelavart-uP4jLndMWnY-unsplash-2.jpg);
+    header {
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 3rem;
+      }
+    }
+    form {
+      input[type="text"] {
+        width: 30vw;
+      }
+    }
+    section {
+      div.todo {
+        width: 90%;
+      }
+    }
+  }
+}
